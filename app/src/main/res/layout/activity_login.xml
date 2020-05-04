@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    >
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:alpha="0.3"
+        android:background="@drawable/bg_login_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:text="Prime"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:text="@string/WELCOME_BACK"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="@string/title_welcome"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlLogInform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSubTitle"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:id="@+id/edUsername"
+                android:textColorHint="@color/colorGray"
+                 >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:gravity="start"
+                android:hint="@string/Username"
+                android:inputType="textCapWords"
+                android:shadowColor="@color/colorWhite"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGray"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:layout_below="@+id/edUsername"
+                android:layout_marginTop="18dp"
+                android:textColorHint="@color/colorGray"
+                app:passwordToggleTint="@android:color/white"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:hint="@string/Password"
+                    android:inputType="textPassword"
+                    android:shadowColor="@color/colorWhite"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="20sp"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:minHeight="40dp"
+                    android:textStyle="bold"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleDrawable="@drawable/ic_eye_off"
+                    app:passwordToggleTint="@color/colorWhite"
+                    tools:ignore="RtlSymmetry"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="400dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/SIGN_IN"
+                android:textColorHint="@color/colorWhite"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:background="#45B950"
+                android:layout_below="@+id/edPassword"
+                android:layout_centerHorizontal="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtForgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/Forget_Password"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlSignIn"
+        android:layout_marginBottom="160dp"
+        />
+
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="726dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:padding="10dp"
+        android:text="@string/Register"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

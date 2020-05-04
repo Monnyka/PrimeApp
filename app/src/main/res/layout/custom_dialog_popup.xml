@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="0dp"
+    >
+    <ImageView
+        android:id="@+id/alertIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_alert"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/title"
+        android:textSize="16sp"
+        android:textColor="#0094DE"
+        android:text="@string/Primeapp"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:gravity="center"
+        />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="Are you sure you want to log out?"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="center"
+            />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#A9A9A9"
+        />
+
+    <TextView
+        android:id="@+id/positive_button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="OK"
+        android:textSize="16sp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:textColor="#0094DE"
+        android:gravity="center"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#A9A9A9"
+        />
+
+        <TextView
+            android:id="@+id/negative_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:textColor="#0094DE"
+            android:gravity="center"
+            />
+</LinearLayout>

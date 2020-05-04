@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PrimeApp</string>
+    <string name="Password">Password</string>
+    <string name="Forget_Password">Forget Password</string>
+    <string name="Welcome_Back">Welcome Back</string>
+    <string name="Please_input_you_user_name_to_reset_the_password">Please input your username to reset the password</string>
+    <string name="Submit">Submit</string>
+    <string name="Back">Back</string>
+    <string name="Username">Username</string>
+    <string name="Login">Login</string>
+    <string name="SIGN_IN">SIGN IN</string>
+    <string name="REGISTER">REGISTER</string>
+    <string name="Register">Register</string>
+    <string name="Confirm_Password">Confirm Password</string>
+    <string name="Email">Email</string>
+    <string name="Please_enter_the_information_below_to_sign_up">Please enter the information below to sign up</string>
+    <string name="SIGN_UP">SIGN UP</string>
+    <string name="Sign_in_to_continue">Sign in to continue</string>
+    <string name="WELCOME_BACK">WELCOME BACK</string>
+    <string name="title_welcome">Millions of movies, TV shows and people to discover. Explore now.</string>
+    <string name="Sign_Out">Sign Out</string>
+    <string name="Discover_latest_Movie_and_show_now">Discover latest Movie and show now</string>
+    <string name="Trending">Trending</string>
+    <string name="Primeapp">Primeapp</string>
+    <string name="Logout_message">Are you sure you want to log out?</string>
+    <string name="Category">Category</string>
+</resources>

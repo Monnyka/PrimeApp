@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#353943">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:id="@+id/appbarMain"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:contentScrim="@color/cardview_shadow_start_color"
+            android:background="#353943"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Hey, Leon!"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="32sp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:text="Discover latest Movie and show now"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="170dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Get access to maintain your own custom personal
+lists, track what you've seen and search and filter for
+what to watch next"
+                />
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:src="@drawable/bg_login_background"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                app:layout_collapseMode="parallax"/>-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?actionBarSize"-->
+<!--                app:layout_collapseMode="parallax"-->
+<!--                app:title=""-->
+<!--                />-->
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <RelativeLayout
+            android:id="@+id/rlMenu"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#242A37"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/ivUser"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="25dp"
+                android:src="@drawable/ic_user_white"
+                android:padding="8dp"
+                />
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:padding="13dp"
+                android:src="@drawable/ic_search_white"
+                android:layout_alignParentEnd="true"
+                />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="45dp"
+                android:padding="13dp"
+                android:src="@drawable/ic_heart_white"
+                android:layout_alignEnd="@+id/ivSearch"
+                />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:background="#BFBFBF"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorBlueMain"/>
+                        <TextView
+                            android:id="@+id/lbTrendingMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="10dp"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:text="@string/Trending"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_below="@+id/lbTrendingMain"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="200dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@color/colorBlueMain"/>
+                        <TextView
+                            android:id="@+id/lbCategoryMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="10dp"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/proxima_nova_bold"
+                            android:text="@string/Category"
+                            />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_below="@+id/lbCategoryMain"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="200dp"
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
